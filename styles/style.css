@@ -1,0 +1,315 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#5482ff), to(#64ff86));
+  background: linear-gradient(90deg, #5482ff, #64ff86);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  color: rgba(0, 255, 255, 0.89);
+  font-size: 3rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+i {
+  pointer-events: none;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+form input,
+form button {
+  border: none;
+  border-radius: 15px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.6rem;
+  margin: 0.15rem;
+  -webkit-box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+form input[type=number] {
+  width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form button {
+  cursor: pointer;
+  background-color: skyblue;
+  -webkit-box-shadow: 2px 2px 2px slateblue, 0px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 2px slateblue, 0px 1px 1px rgba(0, 0, 0, 0.7);
+  color: cornsilk;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+form button:hover {
+  background: darkblue;
+  -webkit-box-shadow: 2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section div.todo {
+  min-width: 50vw;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2px;
+  border-radius: 15px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+section p {
+  background-color: white;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+}
+
+section p.todo-text {
+  width: 50%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+section p.todo-time {
+  width: 75%;
+  text-align: center;
+}
+
+section button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+  cursor: pointer;
+  color: ivory;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+section button.trashcan {
+  background-color: #cd505c;
+  border-radius: 0px 15px 15px 0px;
+}
+
+section .trashcan:hover {
+  background-color: #752b32;
+}
+
+section button.complete {
+  background-color: darkcyan;
+}
+
+section .complete:hover {
+  background-color: #004e4e;
+}
+
+div.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px;
+}
+
+div.sort button {
+  color: #e6e6e6;
+  background-color: rgba(85, 187, 107, 0.836);
+  border: none;
+  border-radius: 20px;
+  padding: 0.3rem 0.55rem;
+  font-size: 2rem;
+  margin: 0.15rem;
+  -webkit-box-shadow: 3px 3px 3px grey, 0px 2px 2px rgba(0, 0, 0, 0.7);
+          box-shadow: 3px 3px 3px grey, 0px 2px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+div.sort button:hover {
+  background: darkgreen;
+  -webkit-box-shadow: 2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+/*水滴聚落*/
+.drops {
+  position: absolute;
+  left: 60%;
+  top: 55%;
+}
+
+/*父水滴*/
+.drop {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 57% 43% 37% 63%/ 45% 52% 48% 55%;
+  -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 20px rgba(0, 0, 0, 0.1), 15px 25px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 35px rgba(255, 255, 255, 0.9);
+          box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 20px rgba(0, 0, 0, 0.1), 15px 25px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 35px rgba(255, 255, 255, 0.9);
+}
+
+/*水滴上的反光*/
+.drop::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 45% 33% 52% 69%/ 44% 44% 57% 55%;
+}
+
+.drop::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 65px;
+  background: white;
+  width: 9px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/*子水滴* :nth-child(指定第幾個(第2-3個)作為子水滴並變形)*/
+.drop:nth-child(2) {
+  -webkit-transform: scale(0.5) translate(-200px, 180px);
+          transform: scale(0.5) translate(-200px, 180px);
+  border-radius: 64% 36% 42% 58%/ 42% 37% 63% 58%;
+}
+
+.drop:nth-child(3) {
+  -webkit-transform: scale(0.5) translate(320px, 210px);
+          transform: scale(0.5) translate(320px, 210px);
+  border-radius: 55% 44% 55% 61%/ 42% 55% 53% 58%;
+}
+/*# sourceMappingURL=style.css.map */

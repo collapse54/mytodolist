@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UFT-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDoList</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./styles/style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>My To Do List</h1>
+        </header>
+
+        <form>
+            <input type="text" placeholder=" Enter a Task..">
+            <input type="number" min="1" max="12" placeholder="Month" required/>
+            <input type="number" min="1" max="31" placeholder="Day" required/>
+            <button type="submit">Add into List</button>
+        </form>
+
+        <div class="sort">
+            <button type="button">Sort by time</button>
+        </div>
+        <br>
+        <div class="drops">
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+        </div>
+        <section>
+        </section>
+    </body>
+    <script src=./TDlist.js></script>
+</html>
+ 

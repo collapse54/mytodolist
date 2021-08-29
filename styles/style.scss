@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;   
+}
+
+body{
+    background: linear-gradient(90deg,rgb(84,130,255),rgb(100,255,134));
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+}
+
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color:rgba(0, 255, 255, 0.89);
+        font-size: 3rem;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
+    }
+}
+
+i{
+    pointer-events: none;
+}
+
+.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input,
+    button{
+        border:none;
+        border-radius: 15px;
+        padding:0.25rem 0.5rem;
+        font-size: 1.6rem;
+        margin: 0.15rem;
+        box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, .7);
+    }
+
+    input[type=number]{
+        width: 100px;
+        justify-content: center;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    button{
+        cursor:pointer;
+        background-color: skyblue ;
+        box-shadow:2px 2px 2px slateblue, 0px 1px 1px rgba(0, 0, 0, .7);
+        color: cornsilk;
+        transition: all .3s ease-in-out;
+    }
+
+    button:hover{
+        background: darkblue;
+        box-shadow:2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, .7);
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.todo{
+        min-width: 50vw;
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        margin: 2px;
+        border-radius: 15px;
+        transition: all 0.25s ease;
+        box-shadow: 2px 2px 2px grey, 0px 1px 1px rgba(0, 0, 0, .7);
+    }
+
+    p{
+        background-color: white;
+        color: black;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+    }
+
+    p.todo-text{
+        width: 50%;
+        border-radius: 15px 0px 0px 15px;
+    }
+
+    p.todo-time{
+        width: 75%;
+        text-align: center;
+    }
+
+    button{
+        padding:0.25rem 0.5rem;
+        font-size: 1.75rem;
+        border: none;
+        cursor: pointer;
+        color:ivory;
+        transition: all 0.3s ease;
+    }
+
+    button.trashcan{
+        background-color: rgb(205,80,92);
+        border-radius: 0px 15px 15px 0px;
+    }
+    .trashcan:hover{
+        background-color: rgb(117, 43, 50);
+    }
+
+    button.complete{
+        background-color: darkcyan;
+    }
+    .complete:hover{
+        background-color: rgb(0, 78, 78);
+    }
+}
+
+div.sort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    button{
+        color: rgb(230,230,230);
+        background-color: rgba(85, 187, 107, 0.836);
+        border:none;
+        border-radius: 20px;
+        padding:0.3rem 0.55rem;
+        font-size: 2rem;
+        margin: 0.15rem;
+        box-shadow: 3px 3px 3px grey, 0px 2px 2px rgba(0, 0, 0, .7);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    button:hover{
+        background: darkgreen;
+        box-shadow:2px 2px 2px black, 0px 1px 1px rgba(0, 0, 0, .7);
+    }
+}
+
+@keyframes scaleUp{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+
+
+
+//水滴加工區
+
+/*水滴聚落*/
+.drops
+{
+    position:absolute;
+    left: 60%;
+    top:55%;
+}
+/*父水滴*/
+.drop
+{
+    position:absolute;
+    height:150px;
+    width: 150px;
+    background:rgba(255,255,255,0.05);
+    border-radius: 57% 43% 37% 63%/ 45% 52% 48% 55%;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
+                15px 25px 20px rgba(0,0,0,0.1),
+                15px 25px 20px rgba(0,0,0,0.05),
+                inset -10px -10px 35px rgba(255,255,255,0.9);
+}
+/*水滴上的反光*/
+.drop::before
+{
+    content:'';
+    position: absolute;
+    top:25px;
+    left:35px;
+    background: white;
+    width:20px;
+    height: 20px;
+    border-radius: 45% 33% 52% 69%/ 44% 44% 57% 55%;
+}
+.drop::after
+{
+    content:'';
+    position: absolute;
+    top:25px;
+    left:65px;
+    background: white;
+    width: 9px;
+    height: 8px;
+    border-radius: 50%;
+}
+/*子水滴* :nth-child(指定第幾個(第2-3個)作為子水滴並變形)*/
+.drop:nth-child(2)
+{
+    transform: scale(0.5) translate(-200px,180px);
+    border-radius: 64% 36% 42% 58%/ 42% 37% 63% 58%;
+}
+.drop:nth-child(3)
+{
+    transform: scale(0.5) translate(320px,210px);
+    border-radius: 55% 44% 55% 61%/ 42% 55% 53% 58%;
+}
